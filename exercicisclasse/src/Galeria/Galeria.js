@@ -1,39 +1,35 @@
 import "./Galeria.css";
-//import react, { useState } from "react";
-import coche1 from "./coche1.jpg";
-import coche2 from "./coche2.jpg";
-import coche3 from "./coche3.jpg";
-import coche4 from "./coche4.jpeg";
+import { useState } from "react";
 
 function Galeria() {
-  //const [foto, setFoto] = useState("");
-  const imagenes = [coche1, coche2, coche3, coche4, "coche5"];
-  function agrandar() {
-    /* setFoto(imagenes[0]);
-    setFoto.width = "50%";
+  const imagenes = [
+    "imagenes/coche1.jpg",
+    "imagenes/coche2.jpg",
+    "imagenes/coche3.jpg",
+    "imagenes/coche4.jpeg",
+  ];
+  const [ampliar, setAmpliar] = useState("foto"); //nombre inicial de la clase de la imagen, guarda los valores iniciales
+  const [imatgeClicada, setImatgeClicada] = useState(null);
 
-    imagenes[0] = foto;*/
-    alert(imagenes.map((n) => n));
-    alert("hazte grande");
+  function agrandar(n) {
+    setImatgeClicada(n);
+    ampliar === "foto" ? setAmpliar("ampliar") : setAmpliar("foto");
   }
 
   return (
-    <div className="coches">
-      {imagenes.map((n, i) => (
-        <img src={n} key={i} height="auto" width="33%" alt={n} />
-      ))}
-      <img
-        className="coche1"
-        src={imagenes[0]}
-        height="auto"
-        width="33%"
-        alt="coche1"
-        onClick={() => agrandar()}
-      ></img>
-      <img src={imagenes[1]} height="auto" width="33%" alt="coche2" />
-      <img src={imagenes[2]} height="auto" width="33%" alt="coche3" />
-      <img src={imagenes[3]} height="auto" width="33%" alt="coche4" />
-    </div>
+    <body className="contenedor">
+      <div className="coches">
+        {imagenes.map((n, i) => (
+          <img
+            className={n === imatgeClicada ? ampliar : "foto"}
+            src={n}
+            key={i}
+            alt={n}
+            onClick={() => agrandar(n)}
+          />
+        ))}
+      </div>
+    </body>
   );
 }
 
