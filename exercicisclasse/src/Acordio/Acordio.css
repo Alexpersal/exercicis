@@ -1,0 +1,7 @@
+.mostrado {
+  visibility: hidden;
+}
+
+.oculto {
+  visibility: visible;
+}

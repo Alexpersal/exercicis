@@ -1,16 +1,22 @@
 import "./Acordio.css";
-//import { useState } from "react";
+import { useState } from "react";
 
-const textos = ["Hola", "Patata", "Aguacate"];
+const [clicado, setClicado] = useState(null);
+const [muestra, setMuestra] = useState("mostrado");
 
 function Acordio() {
+  function mostrar() {}
+
   return (
-    <>
-      <ul>Título</ul>
-      {textos.map((n) => (
-        <li key={n}>{n}</li>
-      ))}
-    </>
+    <div>
+      <div className="Acordeon">Titulo</div>
+      <div
+        className={Clicado === "mostrado" ? muestra : "mostrado"}
+        onClick={patata()}
+      >
+        hola
+      </div>
+    </div>
   );
 }
 
