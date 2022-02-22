@@ -1,0 +1,12 @@
+.Tablero {
+  border: 1px solid black;
+  max-width: 50%;
+  height: 400px;
+  max-height: 50%;
+}
+
+button {
+  width: 30%;
+  height: 25%;
+  margin: 5px;
+}
