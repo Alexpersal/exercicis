@@ -1,19 +1,21 @@
-//import Galeria from "./Galeria/Galeria";
-//import Comptador from "./Comptador/Comptador";
-import Acordio from "./Acordio/Acordio";
-//import ToggleButton from "./ToggleButton/ToggleButton";
-//import TresEnRalla from "./TresEnRalla/TresEnRalla";
-//import Carrusel from "./Carrusel/Carrusel";
-//import Acordio from "./Acordio/Acordio";
-//import ToggleButton from "./ToggleButton/ToggleButton";
-
 import "./App.css";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import llista from "./pages/llista";
 
 function App() {
   return (
-    <div className="App">
-      <Acordio></Acordio>
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          {llista.map((item) => (
+            <Route path={item.path} element={item.Element} />
+          ))}
+        </Route>
+      </Routes>
+    </HashRouter>
   );
 }
 

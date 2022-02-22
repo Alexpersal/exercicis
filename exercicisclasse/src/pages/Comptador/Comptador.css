@@ -9,6 +9,7 @@
 .Display {
   background-color: skyblue;
   border: 1px solid black;
+  width: 200px;
   border-radius: 5%;
   color: darkblue;
   text-align: center;
@@ -20,7 +21,6 @@
 .Botones {
   display: flex;
   justify-content: center;
-
   flex-wrap: wrap;
   margin: 5px;
 }

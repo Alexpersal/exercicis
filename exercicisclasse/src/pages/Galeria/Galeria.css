@@ -2,11 +2,10 @@ body {
   width: 100vh;
   height: 100vh;
   display: flex;
-
   align-content: space-around;
 }
-coches {
-  background-color: red;
+.coches {
+  flex-wrap: wrap;
 }
 .foto {
   width: 33%;
