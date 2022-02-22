@@ -24,17 +24,24 @@ function Carrusel() {
     if (posicio > 0) setPosicio(posicio - +1);
   }
   return (
-    <div className="Container">
-      <button className="Izq" onClick={() => previa()}>
-        boton izquierdo
-      </button>
-      <div className="Imagenes">
-        <img className="Img" alt="imag1" src={imagen[posicio]}></img>
+    <body>
+      <div className="Container">
+        <button className="Izq" onClick={() => previa()}>
+          boton izquierdo
+        </button>
+        <div className="contenedor-imagenes">
+          <img className="Img" alt="imag1" src={imagen[posicio]}></img>
+        </div>
+        <button className="Der" onClick={() => siguiente()}>
+          Boton derecho
+        </button>
       </div>
-      <button className="Der" onClick={() => siguiente()}>
-        Boton derecho
-      </button>
-    </div>
+      <div className="slide">
+        {imagen.map((n) => (
+          <div className={n}>o</div>
+        ))}
+      </div>
+    </body>
   );
 }
 export default Carrusel;
