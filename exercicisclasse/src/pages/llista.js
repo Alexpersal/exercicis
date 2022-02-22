@@ -14,6 +14,7 @@ const llista = [
     Element: <ToggleButton />,
   },
   { path: "Acordio", titol: "Texte en Acordio", Element: <Acordio /> },
+  { path: "Carrusel", titol: "Carruselk de fotos", Element: <Carrusel /> },
   {
     path: "TresEnRalla",
     titol: "Juego Tres en ralla",
