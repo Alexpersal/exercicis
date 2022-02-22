@@ -1,0 +1,45 @@
+body {
+  width: 100vh auto;
+  height: 100vh auto;
+  border: 1px solid black;
+}
+.Container {
+  background-color: aqua;
+  margin-top: 2%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  border: 1px solid black;
+}
+
+.Izq {
+  border: 1px solid black;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 10%;
+}
+
+.contenedor-imagenes {
+  border: 1px solid black;
+  display: flex;
+  justify-items: center;
+  width: 90%;
+}
+.Img {
+  width: 100%;
+  height: max-content;
+  border: 1px solid black;
+}
+
+.Der {
+  border: 1px solid black;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 10%;
+}
+.slide {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
