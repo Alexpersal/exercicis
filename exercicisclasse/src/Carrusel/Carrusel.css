@@ -1,0 +1,29 @@
+.Container {
+  background-color: aqua;
+  margin: 5%;
+  height: 80vh;
+  max-height: 90vh;
+  display: flex;
+  justify-items: center;
+}
+
+.Izq {
+  border: 1px solid black;
+  margin-right: 2%;
+  width: 20%;
+}
+
+.Imagenes {
+  border: 1px solid black;
+  width: 80%;
+}
+.Img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.Der {
+  border: 1px solid black;
+  margin-left: 2%;
+  width: 20%;
+}
