@@ -1,9 +1,3 @@
-body {
-  width: 100vh;
-  height: 100vh;
-  display: flex;
-  align-content: space-around;
-}
 .coches {
   flex-wrap: wrap;
 }
