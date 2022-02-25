@@ -1,8 +1,3 @@
-body {
-  width: 100vh auto;
-  height: 100vh auto;
-  border: 1px solid black;
-}
 .Container {
   background-color: aqua;
   margin-top: 2%;
