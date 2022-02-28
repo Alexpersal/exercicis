@@ -17,7 +17,7 @@ function GroupButton() {
   return (
     <div className="Marco">
       {" "}
-      <div className="Botones">
+      <div className="Boto">
         {botons.map((n, i) => (
           <button
             className={n === posicion ? color : "inicial"}
