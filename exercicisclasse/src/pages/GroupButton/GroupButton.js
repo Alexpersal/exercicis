@@ -27,7 +27,7 @@ function GroupButton() {
             {botons[i]}
           </button>
         ))}
-        <div className="cuadroTexto">{texto}</div>
+        <div>{texto}</div>
       </div>
     </div>
   );

@@ -7,14 +7,10 @@
 }
 
 .Botones {
-  width: 33%;
+  width: 70%;
   border: 1px solid black;
 }
 
-.cuadroTexto {
-  width: 33%;
-  border: 1px solid black;
-}
 .cambioColor {
   background-color: rgb(216, 17, 156);
   color: white;
