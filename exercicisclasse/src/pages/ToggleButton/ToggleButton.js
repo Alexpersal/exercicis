@@ -13,14 +13,12 @@ function ToggleButton() {
   }
 
   return (
-    <body>
-      <div className="contenedor">
-        <button className={clicado} onClick={() => Clicar()}>
-          Pinchame
-        </button>
-        <h1>{texto}</h1>
-      </div>
-    </body>
+    <div className="contenedor">
+      <button className={clicado} onClick={() => Clicar()}>
+        Pinchame
+      </button>
+      <h1>{texto}</h1>
+    </div>
   );
 }
 export default ToggleButton;

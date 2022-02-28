@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           {llista.map((item) => (
-            <Route path={item.path} element={item.Element} />
+            <Route key={item} path={item.path} element={item.Element} />
           ))}
         </Route>
       </Routes>

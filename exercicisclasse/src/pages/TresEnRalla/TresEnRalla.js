@@ -4,53 +4,53 @@ import "./TresEnRalla.css";
 function TresEnRalla() {
   let inicio = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
   const [simbolo, setSimbolo] = useState("-");
-  const [clicado, setClicado] = useState(null);
+  //const [clicado, setClicado] = useState(null);
 
   function cambiaEstado(n) {
     console.log(n);
     console.log(n);
-    if (simbolo === inicio[n]) {
-      setSimbolo("X");
-      inicio[n] = simbolo;
-      console.log(inicio[n]);
-    }
+    //if (simbolo === inicio[n]) {
+    setSimbolo("X");
+    inicio[n] = simbolo;
+    console.log(inicio[n]);
+    // }
     /*  if (n === "2") {
       simbolo === inicio[+n] ? setSimbolo("X") : setSimbolo("-");
     }*/
   }
 
   return (
-    <body>
+    <div>
       <div className="Tablero">
-        <button className="1" onClick={() => cambiaEstado("0")}>
-          {inicio[0]}
+        <button className="1" key="1" onClick={() => cambiaEstado("0")}>
+          {simbolo}
         </button>
-        <button className="2" onClick={() => cambiaEstado("2")}>
-          {inicio[1]}
+        <button className="2" key="2" onClick={() => cambiaEstado("2")}>
+          {simbolo}
         </button>
-        <button className="3" onClick={() => cambiaEstado()}>
-          {inicio[2]}
+        <button className="3" key="3" onClick={() => cambiaEstado()}>
+          {simbolo}
         </button>
-        <button className="4" onClick={() => cambiaEstado()}>
-          {inicio[3]}
+        <button className="4" key="4" onClick={() => cambiaEstado()}>
+          {simbolo}
         </button>
-        <button className="5" onClick={() => cambiaEstado()}>
-          {inicio[4]}
+        <button className="5" key="5" onClick={() => cambiaEstado()}>
+          {simbolo}
         </button>
-        <button className="6" onClick={() => cambiaEstado()}>
-          {inicio[5]}
+        <button className="6" key="6" onClick={() => cambiaEstado()}>
+          {simbolo}
         </button>
-        <button className="7" onClick={() => cambiaEstado()}>
-          {inicio[6]}
+        <button className="7" key="7" onClick={() => cambiaEstado()}>
+          {simbolo}
         </button>
-        <button className="8" onClick={() => cambiaEstado()}>
-          {inicio[7]}
+        <button className="8" key="8" onClick={() => cambiaEstado()}>
+          {simbolo}
         </button>
-        <button className="9" onClick={() => cambiaEstado()}>
-          {inicio[8]}
+        <button className="9" key="9" onClick={() => cambiaEstado()}>
+          {simbolo}
         </button>
       </div>
-    </body>
+    </div>
   );
 }
 export default TresEnRalla;
