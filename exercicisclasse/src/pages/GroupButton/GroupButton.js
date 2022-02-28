@@ -6,15 +6,12 @@ const botons = ["A", "B", "C"];
 function GroupButton() {
   const [texto, setTexto] = useState("CAP");
   const [color, setColor] = useState("inicial");
-  const [posicion, setPosicion] = useState(null);
+  const [posicion, setPosicion] = useState("");
 
   function cambioTexto(i, n) {
     setTexto(botons[i]);
     setPosicion(n);
-    console.log({ i });
-    console.log({ n });
     color === "inicial" ? setColor("cambioColor") : setColor("inicial");
-    console.log({ color });
   }
 
   return (
@@ -30,7 +27,7 @@ function GroupButton() {
             {botons[i]}
           </button>
         ))}
-        <div>{texto}</div>
+        <div className="cuadroTexto">{texto}</div>
       </div>
     </div>
   );

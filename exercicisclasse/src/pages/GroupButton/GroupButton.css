@@ -1,3 +1,21 @@
+.Marco {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Botones {
+  width: 33%;
+  border: 1px solid black;
+}
+
+.cuadroTexto {
+  width: 33%;
+  border: 1px solid black;
+}
 .cambioColor {
-  background-color: aquamarine;
+  background-color: rgb(216, 17, 156);
+  color: white;
 }
