@@ -6,6 +6,9 @@
   align-items: center;
 }
 
+button {
+  width: 30%;
+}
 .Botones {
   width: 70%;
   border: 1px solid black;
