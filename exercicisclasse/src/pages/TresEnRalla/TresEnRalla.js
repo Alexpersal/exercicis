@@ -22,10 +22,13 @@ function TresEnRalla() {
   return (
     <div>
       <div className="Tablero">
-        <button className="1" key="1" onClick={() => cambiaEstado("0")}>
+        <button className="0" key="0" onClick={() => cambiaEstado("0")}>
+          {inicio}
+        </button>
+        <button className="1" key="1" onClick={() => cambiaEstado("1")}>
           {simbolo}
         </button>
-        <button className="2" key="2" onClick={() => cambiaEstado("2")}>
+        <button className="2" key="2" onClick={() => cambiaEstado()}>
           {simbolo}
         </button>
         <button className="3" key="3" onClick={() => cambiaEstado()}>
@@ -44,9 +47,6 @@ function TresEnRalla() {
           {simbolo}
         </button>
         <button className="8" key="8" onClick={() => cambiaEstado()}>
-          {simbolo}
-        </button>
-        <button className="9" key="9" onClick={() => cambiaEstado()}>
           {simbolo}
         </button>
       </div>

@@ -37,8 +37,10 @@ function Carrusel() {
         </button>
       </div>
       <div className="slide">
-        {imagen.map((n) => (
-          <div className={n}>o</div>
+        {imagen.map((n, i) => (
+          <div className={n} key={i}>
+            o
+          </div>
         ))}
       </div>
     </body>
