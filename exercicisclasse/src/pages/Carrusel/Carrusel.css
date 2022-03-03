@@ -1,5 +1,5 @@
 .Container {
-  background-color: aqua;
+  /*background-color: aqua;*/
   margin-top: 2%;
   height: 100%;
   width: 100%;
@@ -21,6 +21,7 @@
   justify-items: center;
   width: 90%;
 }
+
 .Img {
   width: 100%;
   height: max-content;
@@ -28,14 +29,22 @@
 }
 
 .Der {
-  border: 1px solid black;
   margin-left: 2%;
   margin-right: 2%;
   width: 10%;
+  height: 400px;
 }
 .slide {
   border: 1px solid black;
   display: flex;
   justify-content: center;
+}
+
+.sinResaltar {
+  font-size: 22px;
   color: blueviolet;
+}
+.resaltar {
+  font-size: 30px;
+  color: black;
 }
