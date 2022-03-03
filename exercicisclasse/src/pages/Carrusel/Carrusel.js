@@ -42,7 +42,7 @@ function Carrusel() {
       </div>
       <div className="slide">
         {imagen.map((n, i) => (
-          <div className={n === posicio ? "resalta" : "sinResaltar"} key={i}>
+          <div className={n === posicio ? resalta : "sinResaltar"} key={i}>
             o
           </div>
         ))}
