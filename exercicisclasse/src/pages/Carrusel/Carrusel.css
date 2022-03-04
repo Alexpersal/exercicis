@@ -5,14 +5,7 @@
   width: 100%;
   display: flex;
   justify-items: center;
-  border: 1px solid black;
-}
-
-.Izq {
-  border: 1px solid black;
-  margin-left: 2%;
-  margin-right: 2%;
-  width: 10%;
+  align-items: center;
 }
 
 .contenedor-imagenes {
@@ -20,31 +13,61 @@
   display: flex;
   justify-items: center;
   width: 90%;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
 }
 
 .Img {
   width: 100%;
-  height: max-content;
-  border: 1px solid black;
+  transition-property: width 4s;
 }
 
 .Der {
   margin-left: 2%;
-  margin-right: 2%;
+  margin-right: 5%;
   width: 10%;
   height: 400px;
 }
+.skipLeft {
+  margin-left: 2%;
+  margin-right: 2%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+.skipRight {
+  margin-left: 2%;
+  margin-right: 2%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
 .slide {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
 }
 
 .sinResaltar {
+  background-color: rgb(92, 135, 163);
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 14px;
+  height: 14px;
   font-size: 22px;
-  color: blueviolet;
+  margin-top: 3%;
+  margin-left: 5px;
+  cursor: pointer;
 }
 .resaltar {
-  font-size: 30px;
-  color: black;
+  background-color: rgb(63, 148, 37);
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 18px;
+  height: 18px;
+  font-size: 26px;
+  margin-top: 3%;
+  margin-left: 5px;
+  cursor: pointer;
 }

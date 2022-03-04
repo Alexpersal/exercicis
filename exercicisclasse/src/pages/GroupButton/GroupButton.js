@@ -27,8 +27,8 @@ function GroupButton() {
             {botons[i]}
           </button>
         ))}
-        <div>{texto}</div>
       </div>
+      <div className="letraTexto">{texto}</div>
     </div>
   );
 }

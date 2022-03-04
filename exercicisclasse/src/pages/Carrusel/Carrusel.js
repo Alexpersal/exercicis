@@ -21,30 +21,41 @@ function Carrusel() {
     if (posicio > 0) setPosicio(posicio - +1);
   }
 
-  function cambiaImagen(i) {
+  function slideCambiaImagen(i) {
+    setPosicio(i);
+    console.log(resalta);
     resalta === "sinResaltar"
       ? setResalta("resaltar")
       : setResalta("sinResaltar");
+    console.log(resalta);
   }
 
   return (
     <body>
       <div className="Container">
-        <button className="Izq" onClick={() => previa()}>
-          boton izquierdo
-        </button>
+        <img
+          className="skipLeft"
+          alt="Skip left"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Skip_to_left3.svg/256px-Skip_to_left3.svg.png"
+          onClick={() => previa()}
+        />{" "}
         <div className="contenedor-imagenes">
           <img className="Img" alt="imag1" src={imagen[posicio]}></img>
         </div>
-        <button className="Der" onClick={() => siguiente()}>
-          Boton derecho
-        </button>
+        <img
+          className="skipRight"
+          alt="Skip Right"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Skip_to_right3.svg/256px-Skip_to_right3.svg.png"
+          onClick={() => siguiente()}
+        />
       </div>
       <div className="slide">
         {imagen.map((n, i) => (
-          <div className={n === posicio ? resalta : "sinResaltar"} key={i}>
-            o
-          </div>
+          <div
+            className={n !== posicio ? resalta : "sinResaltar"}
+            key={i}
+            onClick={() => slideCambiaImagen(i)}
+          ></div>
         ))}
       </div>
     </body>

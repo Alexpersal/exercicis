@@ -10,6 +10,7 @@ import GroupButton from "./GroupButton/GroupButton";
 import VectorEj3 from "./VectorEj3/VectorEj3";
 import VectorEj5 from "./VectorEj5/VectorEj5";
 import VectorEj6 from "./VectorEj6/VectorEj6";
+import RelojDigital from "./RelojDigital/RelojDigital";
 
 const llista = [
   { path: "Comptador", titol: "comptador", Element: <Comptador /> },
@@ -25,6 +26,11 @@ const llista = [
     path: "TresEnRalla",
     titol: "Juego Tres en ralla",
     Element: <TresEnRalla />,
+  },
+  {
+    path: "RelojDigital",
+    titol: "Reloj Digital",
+    Element: <RelojDigital></RelojDigital>,
   },
   { path: "GroupButton", titol: "Grupo de botones", Element: <GroupButton /> },
   { path: "VectorEj1", titol: "Ejercicio Vectores 1", Element: <VectorEj1 /> },

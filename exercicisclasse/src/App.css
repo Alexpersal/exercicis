@@ -7,7 +7,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: bisque;
+  background-color: rgb(235, 229, 229);
 }
 
 .HolyGrail-body {
@@ -23,6 +23,8 @@ body {
 .HolyGrail-ads {
   /* 12em is the width of the columns */
   flex: 0 0 12em;
+  background-color: rgba(169, 206, 238, 0.897);
+  color: cornflowerblue;
 }
 
 .HolyGrail-nav {
@@ -31,9 +33,10 @@ body {
 }
 header,
 footer {
-  background-color: aliceblue;
+  background-color: rgb(100, 169, 230);
   line-height: 5rem;
   padding: 0 1rem;
+  color: white;
 }
 
 main,

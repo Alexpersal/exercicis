@@ -1,20 +1,26 @@
 .Marco {
-  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10%;
 }
 
-button {
-  width: 30%;
-}
 .Boto {
   width: 70%;
-  border: 1px solid black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .cambioColor {
   background-color: rgb(216, 17, 156);
   color: white;
+}
+
+.letraTexto {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
