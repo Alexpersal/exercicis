@@ -1,21 +1,57 @@
 import { useState, useEffect } from "react";
 import "./RelojDigital.css";
-
-const time = new Date();
+const dias = [
+  "Domingo",
+  "Lunes",
+  "Martes",
+  "Miércoles",
+  "Jueves",
+  "Viernes",
+  "Sábado",
+];
+const mes = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
+];
 
 function RelojDigital() {
-  let fecha =
-    time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
-  const [seg, setSeg] = useState({ fecha });
+  const [horario, setHorario] = useState(new Date().toLocaleTimeString());
+
+  let diaSem = new Date();
+  diaSem = diaSem.getDay();
+  let fecha = new Date();
+  fecha =
+    fecha.getDate() +
+    " de " +
+    mes[fecha.getMonth()] +
+    " de " +
+    fecha.getFullYear();
 
   useEffect(() => {
     setInterval(() => {
-      setSeg((n) => n + 1);
+      setHorario(new Date().toLocaleTimeString());
     }, 1000);
   }, []);
-  console.log(fecha);
-  console.log(seg);
 
-  return <div className="hora">{fecha.time.seg}</div>;
+  return (
+    <div className="MarcoRelojDig">
+      <div className="relojDigital">
+        <div className="hora"> {horario}</div>
+        <div className="fechaReloj">
+          {dias[diaSem]} , {fecha}
+        </div>
+      </div>
+    </div>
+  );
 }
 export default RelojDigital;
