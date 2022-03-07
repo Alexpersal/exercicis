@@ -1,9 +1,11 @@
 .contenedor {
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
   align-items: center;
-  max-width: 400px;
+  max-width: 90%;
+  height: 80%;
+  max-height: 90%;
   margin: 50px;
 }
 .clicado {
@@ -12,10 +14,9 @@
   background-color: white;
   color: #4caf50;
   padding: 16px 32px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 32px;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -27,7 +28,6 @@
   background-color: rgba(165, 42, 42, 0.699);
   color: white;
   padding: 16px 32px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;

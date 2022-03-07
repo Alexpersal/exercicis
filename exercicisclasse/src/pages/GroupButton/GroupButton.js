@@ -11,7 +11,7 @@ function GroupButton() {
   function cambioTexto(i, n) {
     setTexto(botons[i]);
     setPosicion(n);
-    color === "inicial" ? setColor("cambioColor") : setColor("inicial");
+    if (color === "inicial") setColor("cambioColor");
   }
 
   return (

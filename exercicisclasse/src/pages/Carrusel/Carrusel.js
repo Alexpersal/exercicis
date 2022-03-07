@@ -9,25 +9,19 @@ function Carrusel() {
   ];
 
   const [posicio, setPosicio] = useState(0);
-  const [resalta, setResalta] = useState("sinResaltar");
+  const [resalta, setResalta] = useState("resaltar");
 
   function siguiente() {
-    if (posicio < imagen.length - 1) {
-      setPosicio((posicio) => posicio + 1);
-    }
+    if (posicio < imagen.length - 1) setPosicio((posicio) => posicio + 1);
   }
 
   function previa() {
-    if (posicio > 0) setPosicio(posicio - +1);
+    if (posicio > 0) setPosicio(posicio - 1);
   }
 
   function slideCambiaImagen(i) {
     setPosicio(i);
-    console.log(resalta);
-    resalta === "sinResaltar"
-      ? setResalta("resaltar")
-      : setResalta("sinResaltar");
-    console.log(resalta);
+    if (resalta === "sinResaltar") setResalta("resaltar");
   }
 
   return (
@@ -52,7 +46,7 @@ function Carrusel() {
       <div className="slide">
         {imagen.map((n, i) => (
           <div
-            className={n !== posicio ? resalta : "sinResaltar"}
+            className={i === posicio ? resalta : "sinResaltar"}
             key={i}
             onClick={() => slideCambiaImagen(i)}
           ></div>

@@ -4,11 +4,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  height: 90%;
 }
 
 .Boto {
   width: 70%;
+  height: 30%;
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -23,4 +25,5 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-size: 64px;
 }

@@ -23,14 +23,16 @@ function Comptador() {
   }
 
   return (
-    <div className="Calculadora">
-      <div className="Display"> {incrementa} </div>
-      <div className="Botones">
-        {operador.map((n) => (
-          <button className={n} onClick={() => Calcular(n)}>
-            {n}
-          </button>
-        ))}
+    <div className="caja">
+      <div className="Calculadora">
+        <div className="Display"> {incrementa} </div>
+        <div className="Botones">
+          {operador.map((n) => (
+            <button className={n} onClick={() => Calcular(n)}>
+              {n}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
