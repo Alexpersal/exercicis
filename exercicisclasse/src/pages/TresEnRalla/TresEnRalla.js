@@ -1,32 +1,37 @@
 import { useState } from "react";
 import "./TresEnRalla.css";
-
+let inicio = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
 function TresEnRalla() {
-  let inicio = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
   const [simbolo, setSimbolo] = useState("-");
-  const [clicado, setClicado] = useState(null);
+  const [clicado, setClicado] = useState(0);
 
   function cambiaEstado(i) {
+    console.log(i);
+    let copia = [...inicio];
     setClicado(i);
-    if (inicio[i] === "-") {
+    if (copia[clicado] === "-") {
       if (i % 2 === 0) {
-        setSimbolo("X");
-        setClicado(i);
+        setSimbolo((copia[clicado] = "X"));
+        inicio.splice(clicado, 1, simbolo);
+        //setClicado(i);
       } else {
-        setSimbolo("Y");
-        setClicado("Y");
+        setSimbolo((copia[clicado] = "O"));
+        inicio.splice(clicado, 1, simbolo);
+        //setClicado(i);
       }
-      inicio[i] = simbolo;
     }
+    console.log(i);
+
     console.log(simbolo);
-    console.log(clicado);
+
+    console.log("inicio" + inicio);
   }
 
   return (
     <div className="Tablero">
       {inicio.map((n, i) => (
         <button
-          className={n === clicado ? simbolo : "Z"}
+          className={n /*=== clicado ? simbolo : "O"*/}
           key={i}
           onClick={() => cambiaEstado(i)}
         >
