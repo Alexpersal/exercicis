@@ -1,5 +1,4 @@
 .Container {
-  /*background-color: aqua;*/
   margin-top: 2%;
   height: 100%;
   width: 100%;
@@ -22,12 +21,6 @@
   transition-property: width 4s;
 }
 
-.Der {
-  margin-left: 2%;
-  margin-right: 5%;
-  width: 10%;
-  height: 400px;
-}
 .skipLeft {
   margin-left: 2%;
   margin-right: 2%;
@@ -51,6 +44,13 @@
   align-items: center;
 }
 
+.sinResaltar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease-in-out;
+  background: #4f95da;
+}
+
 .sinResaltar {
   background-color: rgb(100, 169, 230, 0.5);
   border: 0.5px solid gray;
@@ -63,6 +63,12 @@
   cursor: pointer;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
 }
+
+.resaltar:hover {
+  transition: 0.5s ease-in-out;
+  background: #4f95da;
+}
+
 .resaltar {
   background-color: rgb(100, 169, 230);
   border: 1px solid rgb(255, 255, 255);
