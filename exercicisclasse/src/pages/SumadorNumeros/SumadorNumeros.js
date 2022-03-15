@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function SumadorNumeros() {
-  const [suma, setSuma] = useState();
+  /*const [suma, setSuma] = useState();
 
   function sumar() {}
   return (
@@ -14,5 +14,5 @@ export default function SumadorNumeros() {
         <button onClick={() => sumar()}>Suma</button> suma
       </h1>
     </div>
-  );
+  );*/
 }
