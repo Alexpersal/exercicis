@@ -28,7 +28,7 @@ function Comptador() {
         <div className="Display"> {incrementa} </div>
         <div className="Botones">
           {operador.map((n) => (
-            <button className={n} onClick={() => Calcular(n)}>
+            <button key={n} className={n} onClick={() => Calcular(n)}>
               {n}
             </button>
           ))}

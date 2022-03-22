@@ -11,12 +11,13 @@ import VectorEj3 from "./VectorEj3/VectorEj3";
 import VectorEj5 from "./VectorEj5/VectorEj5";
 import VectorEj6 from "./VectorEj6/VectorEj6";
 import RelojDigital from "./RelojDigital/RelojDigital";
+import { CounterRedux } from "./ComptadorRedux/CounterRedux";
 
 const llista = [
   { path: "Comptador", titol: "comptador", Element: <Comptador /> },
   { path: "Galeria", titol: "Galeria de fotos", Element: <Galeria /> },
   {
-    path: "ToggleButton",
+    path: "Toggle-Button",
     titol: "Boton que cambia",
     Element: <ToggleButton />,
   },
@@ -32,7 +33,12 @@ const llista = [
     titol: "Reloj Digital",
     Element: <RelojDigital></RelojDigital>,
   },
-  { path: "GroupButton", titol: "Grupo de botones", Element: <GroupButton /> },
+  {
+    path: "Comptador-Redux",
+    titol: "Comptador Redux",
+    Element: <CounterRedux />,
+  },
+  { path: "Group-Button", titol: "Grupo de botones", Element: <GroupButton /> },
   { path: "VectorEj1", titol: "Ejercicio Vectores 1", Element: <VectorEj1 /> },
   { path: "VectorEj2", titol: "Ejercicio Vectores 2", Element: <VectorEj2 /> },
   { path: "VectorEj3", titol: "Ejercicio Vectores 3", Element: <VectorEj3 /> },
