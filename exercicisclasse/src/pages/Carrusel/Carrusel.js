@@ -25,7 +25,7 @@ function Carrusel() {
   }
 
   return (
-    <body>
+    <div className="CarruselImagenes">
       <div className="Container">
         <img
           className="skipLeft"
@@ -52,7 +52,7 @@ function Carrusel() {
           ></div>
         ))}
       </div>
-    </body>
+    </div>
   );
 }
 export default Carrusel;
