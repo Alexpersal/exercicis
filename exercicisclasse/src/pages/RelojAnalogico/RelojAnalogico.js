@@ -1,29 +1,40 @@
 import "./RelojAnalogico.css";
 import { useState, useEffect } from "react";
 
+const grados_Seg_Min = 306 / 60;
+const grados_hora = 306 / 12;
+
 export default function RelojAnalogico() {
+  const [milisegundos, setMilisegundos] = useState(
+    new Date().getMilliseconds()
+  );
   const [segundos, setSegundos] = useState(new Date().getSeconds());
   const [minutos, setMinutos] = useState(new Date().getMinutes());
   const [horas, setHoras] = useState(new Date().getHours());
-  const [anguloSeg, setAnguloSeg] = useState(segundos * Math.round(360 / 60));
-  const [anguloMin, setAnguloMin] = useState(minutos * Math.round(360 / 60));
-  const [anguloHoras, SetAnguloHoras] = useState(horas * Math.round(360 / 12));
+  const [anguloSeg, setAnguloSeg] = useState(segundos * grados_Seg_Min);
+  const [anguloMin, setAnguloMin] = useState(minutos * grados_Seg_Min);
+  const [anguloHoras, SetAnguloHoras] = useState(horas * grados_hora);
 
   useEffect(() => {
     const intervalID = setInterval(() => {
+      setMilisegundos(new Date().getMilliseconds());
       setSegundos(new Date().getSeconds());
       setMinutos(new Date().getMinutes());
       setHoras(new Date().getHours());
-      setAnguloSeg(segundos * Math.round(360 / 60));
-      setAnguloMin(minutos * Math.round(360 / 60));
-      SetAnguloHoras(horas * Math.round(360 / 12));
+      setAnguloSeg(
+        Math.round((segundos + milisegundos / 1000) * grados_Seg_Min)
+      );
+      setAnguloMin(
+        Math.round((minutos + milisegundos / 1000) * grados_Seg_Min)
+      );
+      SetAnguloHoras(Math.round((horas + milisegundos / 1000) * grados_hora));
 
       console.log(segundos + "segundos");
       console.log(minutos + "minutos");
       console.log(horas + "horas");
       console.log(anguloSeg);
       console.log(anguloHoras);
-    }, 1000);
+    }, 160);
 
     document.querySelector(
       ".segundero"
