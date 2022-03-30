@@ -3,7 +3,7 @@ import Galeria from "./Galeria/Galeria";
 import ToggleButton from "./ToggleButton/ToggleButton";
 import Acordio from "./Acordio/Acordio";
 import Carrusel from "./Carrusel/Carrusel";
-import TresEnRalla from "./TresEnRalla/TresEnRalla";
+//import TresEnRalla from "./TresEnRalla/TresEnRalla";
 import VectorEj1 from "./VectorEj1/VectorEj1";
 import VectorEj2 from "./VectorEj2/VectorEj2";
 import GroupButton from "./GroupButton/GroupButton";
@@ -24,11 +24,11 @@ const llista = [
   },
   { path: "Acordio", titol: "Texte en Acordio", Element: <Acordio /> },
   { path: "Carrusel", titol: "Carrusel de fotos", Element: <Carrusel /> },
-  {
-    path: "TresEnRalla",
-    titol: "Juego Tres en ralla",
-    Element: <TresEnRalla />,
-  },
+  // {
+  //   path: "TresEnRalla",
+  //   titol: "Juego Tres en ralla",
+  //   Element: <TresEnRalla />,
+  // },
   {
     path: "Reloj-Digital",
     titol: "Reloj Digital",
