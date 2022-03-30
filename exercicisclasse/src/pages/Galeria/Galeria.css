@@ -1,7 +1,6 @@
 .coches {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   align-items: center;
   margin-top: 10%;
@@ -11,6 +10,9 @@
   max-height: 200px;
   border: 1px solid black;
   margin: 5px;
+}
+.foto::after {
+  display: none;
 }
 
 .ampliar {
