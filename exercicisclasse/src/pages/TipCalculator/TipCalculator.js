@@ -25,7 +25,7 @@ export default function TipCalculator() {
   function comensales(n) {
     console.log(incrementa + "incrementa");
     if (incrementa < 10) {
-      if (n === "+1") setIncrementa((incrementa) => incrementa + 1);
+      if (n === "+1") setIncrementa((num) => num + 1);
 
       console.log(incrementa + "incrementa2");
       return setCuentaPersona(suma / incrementa);
