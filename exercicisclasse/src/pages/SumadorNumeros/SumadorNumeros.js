@@ -1,18 +1,28 @@
-/*import { useState } from "react";*/
+import { useState } from "react";
 
 export default function SumadorNumeros() {
-  /*const [suma, setSuma] = useState();
+  const [valor, setValor] = useState();
+  const [suma, setSuma] = useState(0);
 
-  function sumar() {}
+  const sumarNumeros = (valor) => {
+    setSuma(parseInt(valor) + parseInt(suma));
+  };
+
+  console.log(suma);
   return (
-    <div>
-      <label for="valor">Valor: </label>
-      <input type="Text" id="valor" name="valor"></input>
-      <label for="total">Total: </label>
-      <input type="Number" id="total" name="total" placeholder="0"></input>
-      <h1>
-        <button onClick={() => sumar()}>Suma</button> suma
-      </h1>
-    </div>
-  );*/
+    <>
+      <h1>Introduzca un valor inicial</h1>
+      <label className="valorInicial">Valor:</label>
+      <input
+        value={valor}
+        type={Number}
+        onChange={(event) => setValor(event.target.value)}
+      />
+      <br />
+      <label className="sumaTotal">Total: </label>
+      <input value={suma} type={Number} />
+      <br />
+      <button onClick={() => sumarNumeros(valor)}>Sumar</button>
+    </>
+  );
 }

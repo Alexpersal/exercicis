@@ -13,6 +13,7 @@ import VectorEj6 from "./VectorEj6/VectorEj6";
 import RelojDigital from "./RelojDigital/RelojDigital";
 import { CounterRedux } from "./ComptadorRedux/CounterRedux";
 import RelojAnalogico from "./RelojAnalogico/RelojAnalogico";
+import SumadorNumeros from "./SumadorNumeros/SumadorNumeros";
 
 const llista = [
   { path: "Comptador", titol: "comptador", Element: <Comptador /> },
@@ -38,6 +39,11 @@ const llista = [
     path: "Reloj-Analogico",
     titol: "Reloj Analogico",
     Element: <RelojAnalogico></RelojAnalogico>,
+  },
+  {
+    path: "Sumador-Numeros",
+    titol: "Sumador Numeros",
+    Element: <SumadorNumeros></SumadorNumeros>,
   },
   {
     path: "Comptador-Redux",
