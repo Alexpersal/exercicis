@@ -14,6 +14,7 @@ import RelojDigital from "./RelojDigital/RelojDigital";
 import { CounterRedux } from "./ComptadorRedux/CounterRedux";
 import RelojAnalogico from "./RelojAnalogico/RelojAnalogico";
 import SumadorNumeros from "./SumadorNumeros/SumadorNumeros";
+import TipCalculator from "./TipCalculator/TipCalculator";
 
 const llista = [
   { path: "Comptador", titol: "comptador", Element: <Comptador /> },
@@ -44,6 +45,11 @@ const llista = [
     path: "Sumador-Numeros",
     titol: "Sumador Numeros",
     Element: <SumadorNumeros></SumadorNumeros>,
+  },
+  {
+    path: "Tip-Calculator",
+    titol: "Calcular Propina",
+    Element: <TipCalculator></TipCalculator>,
   },
   {
     path: "Comptador-Redux",
