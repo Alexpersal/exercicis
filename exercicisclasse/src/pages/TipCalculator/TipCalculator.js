@@ -6,7 +6,6 @@ export default function TipCalculator() {
   const [suma, setSuma] = useState(0);
   const [redondeo, setRedondeo] = useState(0);
   const [incrementa, setIncrementa] = useState(1);
-  const [cuentaPersona, setCuentaPersona] = useState(0);
 
   const totalCuenta = (importeIni, tip) => {
     const propina = (importeIni * tip) / 100;
@@ -16,23 +15,21 @@ export default function TipCalculator() {
   };
 
   const redondear = () => {
-    // if (suma % 10 === 0) console.log(suma % 10);
-    // else return console.log("capullo");
-    if (suma % 5 === 0) return setRedondeo(suma + 5);
-    console.log(suma / 5);
+    if (suma % 5 === 0) setRedondeo(suma + 5);
+    else {
+      //no funciona todavia el redondeo si no es 5 o 10
+      setRedondeo(Math.ceil(suma));
+      console.log(redondeo + "redondeo");
+      while (redondeo % 5 !== 0) setRedondeo((num) => num + 1);
+    }
   };
 
   function comensales(n) {
-    console.log(incrementa + "incrementa");
     if (incrementa < 10) {
       if (n === "+1") setIncrementa((num) => num + 1);
-
-      console.log(incrementa + "incrementa2");
-      return setCuentaPersona(suma / incrementa);
     }
-    if (incrementa > 0) {
+    if (incrementa > 1) {
       if (n === "-1") setIncrementa((num) => num - 1);
-      return setCuentaPersona(suma / incrementa);
     }
   }
 
@@ -80,7 +77,7 @@ export default function TipCalculator() {
           -1
         </button>
       </div>
-      <div>Cuenta final por persona: {cuentaPersona}</div>
+      <div>Cuenta final por persona: {suma / incrementa}</div>
     </>
   );
 }
