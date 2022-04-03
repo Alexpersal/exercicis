@@ -1,0 +1,38 @@
+.tipCalculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  width: 50%;
+}
+
+.inicial,
+.numeroPax,
+.redondear {
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1%;
+  width: 90%;
+}
+
+input {
+  text-align: end;
+}
+.numeroPax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-left: 1%;
+}
+.botonesPax {
+  display: flex;
+}
+
+.final {
+  font-size: 2rem;
+}
