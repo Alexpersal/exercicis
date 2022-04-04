@@ -7,10 +7,6 @@ function Comptador() {
   const [incrementa, setIncrementa] = useState(0);
 
   function Calcular(n) {
-    /*setIncrementa(Math.max(0, Math.min(10, incrementa + +n))); //Solucio 1 David*/
-    /*let resultat = incrementa + +n; //Solucio 2 David
-    if (0 <= resultat && resultat <= 10) setIncrementa(resultat);*/
-
     if (incrementa < 10) {
       if (n === "+1") setIncrementa((num) => num + 1);
       if (incrementa < 6) {

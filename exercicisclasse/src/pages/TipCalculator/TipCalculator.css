@@ -18,6 +18,10 @@
 
 input {
   text-align: end;
+  margin-left: 1%;
+}
+label {
+  margin-left: 1%;
 }
 .numeroPax {
   display: flex;
@@ -28,6 +32,7 @@ input {
 
 button {
   margin-left: 1%;
+  margin-top: 1%;
 }
 .botonesPax {
   display: flex;

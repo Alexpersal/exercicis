@@ -5,29 +5,31 @@ export default function TipCalculator() {
   const [importeInicial, setImporteInicial] = useState();
   const [tip, setTip] = useState(0);
   const [suma, setSuma] = useState(0);
-  const [redondeo, setRedondeo] = useState(suma);
+  const [redondeo, setRedondeo] = useState(0);
   const [incrementa, setIncrementa] = useState(1);
+  const [check, setCheck] = useState("true");
 
   const totalCuenta = (importeIni, tip) => {
-    const propina = (importeIni * tip) / 100;
-    setSuma(parseFloat(importeIni) + propina);
+    const cuenta = (importeIni * tip) / 100;
+    setSuma(parseFloat(importeIni) + cuenta);
   };
 
-  const redondear = () => {
-    if (suma % 5 === 0) setRedondeo(suma + 5);
-    else {
-      setRedondeo(Math.ceil(suma));
-      let propina = Math.ceil(suma);
-      console.log(redondeo + "redondeo");
-      console.log(propina + "propina");
-      setSuma(propina);
-
-      while (propina % 5 !== 0) {
-        propina = propina + 1;
-        setRedondeo(propina);
+  const redondear = (check, importeIni) => {
+    setRedondeo(suma);
+    if (check === "true") {
+      if (suma % 5 === 0) setSuma(suma + 5);
+      else {
+        let propina = Math.ceil(suma);
         setSuma(propina);
-        console.log(propina + "propina2");
+        while (propina % 5 !== 0) {
+          propina = propina + 1;
+          setSuma(propina);
+        }
       }
+      setCheck("false");
+    } else {
+      setCheck("true");
+      setSuma(redondeo);
     }
   };
 
@@ -40,6 +42,7 @@ export default function TipCalculator() {
       <h2>Calcular cuenta Restaurante</h2>
       <div className="inicial">
         <label className="factura">Cuenta Restaurante:</label>
+        <br />
         <input
           value={importeInicial}
           type={Number}
@@ -48,6 +51,7 @@ export default function TipCalculator() {
         €
         <br />
         <label className="propina">Cantidad Propina: </label>
+        <br />
         <input
           value={tip}
           type={Number}
@@ -56,6 +60,7 @@ export default function TipCalculator() {
         %
         <br />
         <label className="TotalCuenta">Total cuenta con propina: </label>
+        <br />
         <input value={suma} type={Number} />€
         <br />
         <button onClick={() => totalCuenta(importeInicial, tip)}>Sumar</button>
@@ -65,11 +70,9 @@ export default function TipCalculator() {
           type="checkbox"
           name="redondeo"
           id="opt-in"
-          onClick={() => redondear()}
+          onClick={() => redondear(check, tip)}
         />
         <label for="opt-in">Redondear hasta 5€</label>
-        <br />
-        <label for="opt-in">Total con redondeo {redondeo}€</label>
       </div>
       <div className="numeroPax">
         <div className="Display"> {incrementa} </div>
